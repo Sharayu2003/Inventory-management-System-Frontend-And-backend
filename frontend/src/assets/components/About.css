@@ -1,0 +1,156 @@
+.about-wrapper {
+  padding: 50px 10%;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 2.8rem;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #636e72;
+}
+
+.about-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.about-left {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.about-left img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-right {
+  text-align: center;
+  flex: 1 1 55%;
+}
+
+.about-right h2 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box i {
+  font-size: 1.8rem;
+  color: #0984e3;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #636e72;
+  font-size: 0.95rem;
+}
+
+.about-cta {
+  text-align: center;
+  background: #dfe6e9;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  color: #636e72;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #0984e3;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #74b9ff;
+}
+
+
+@media (min-width: 768px) {
+  .about-body {
+    flex-direction: row;
+  }
+
+  .about-left,
+  .about-right {
+    width: auto;
+  }
+
+  .about-header h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-header p {
+    font-size: 1.4rem;
+  }
+
+  .about-right h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-cta {
+    padding: 60px;
+  }
+
+  .about-cta h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-cta p {
+    font-size: 1.3rem;
+  }
+}

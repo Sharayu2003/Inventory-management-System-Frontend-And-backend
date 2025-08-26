@@ -1,0 +1,146 @@
+/* Viewuser.css */
+
+/* Container with sidebar and main content */
+.Main2 {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Background like your image - warm peachy purple gradient */
+  background: radial-gradient(circle, #f9c78c 0%, #8e7182 100%);
+  color: #4a3b46; /* dark muted purple text */
+}
+
+/* Sidebar styling */
+.Dashsidebar {
+  width: 250px;
+  background: rgba(142, 113, 130, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Table container for scrolling if needed */
+.table-container {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  background-color: #f9f5f2; /* very light peach */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  color: #4a3b46;
+}
+
+/* Table header */
+.table thead tr {
+  background: linear-gradient(90deg, #8e7182 0%, #f9c78c 100%);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Table cells */
+.table th, .table td {
+  padding: 12px 18px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Rounded corners on first and last header cells */
+.table thead tr th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.table thead tr th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Table rows */
+.table tbody tr {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(138, 117, 135, 0.1);
+  transition: background 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: table-row;
+}
+
+/* Hover row */
+.table tbody tr:hover {
+  background-color: #fce8d5; /* soft warm highlight */
+  box-shadow: 0 4px 15px rgba(142, 113, 130, 0.3);
+}
+
+/* Links */
+.nav-link {
+  color: #d78b3e; /* warm orange */
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #7e6270; /* muted purple */
+  text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #e7a95f; /* warm peach */
+  border: none;
+  color: #4a3b46; /* dark muted purple */
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #d78b3e; /* deeper warm orange */
+  color: #ffffff;
+}
+
+.pagination button.active {
+  background-color: #7e6270; /* muted purple */
+  color: #fff;
+}
+
+.pagination button:disabled {
+  background-color: #f2d7a3; /* pale peach */
+  cursor: not-allowed;
+  color: #9b8b90; /* soft muted */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table {
+    font-size: 12px;
+  }
+
+  .table th, .table td {
+    padding: 8px 10px;
+  }
+}

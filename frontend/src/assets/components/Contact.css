@@ -1,0 +1,99 @@
+.maincontact{
+  height:620px;
+  width:100%;
+  padding-top:50px;
+
+}
+.contact-container {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.contact-sections {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contact-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.contact-box h4 {
+  font-size: 1.3rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.contact-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-box b {
+  display: inline-block;
+  margin-top: 10px;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+/* Mobile — default styles already suit phones */
+
+/* Tablet Devices (small screens) */
+@media (max-width: 768px) {
+  .contact-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-box {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+/* Larger Tablets & Small Laptops */
+@media (min-width: 769px) and (max-width: 991px) {
+  .contact-sections {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .contact-box {
+    width: 45%;
+  }
+}
+
+/* Desktops & Larger Screens */
+@media (min-width: 992px) {
+  .contact-sections {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .contact-box {
+    width: 320px; /* original width */
+  }
+}

@@ -1,0 +1,125 @@
+/*  Base Styles (Mobile-First) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  background: rgb(219, 181, 109);
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-button, .button-hover {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 2px;
+  height: 35px;
+  width: 35px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.my-button:hover {
+  background: orange;
+}
+
+.button-hover:hover {
+  background: green;
+  color: white;
+}
+
+.login-wrapper, .login-form, .k {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  flex-direction: column;
+}
+
+.h { text-align: center; }
+
+/* Shared utility spacing class */
+.control {
+  padding-right: 200px;
+  gap: 50px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.divs { padding-left: 80px; }
+
+/*  Tablet & Small Desktop (≥ 768px) */
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+  }
+  .control {
+    padding-right: 100px;
+    gap: 30px;
+  }
+  .divs {
+    padding-left: 40px;
+  }
+}
+
+/*  Desktop & Larger Screens (≥ 1024px) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 50px;
+  }
+  .logo { font-size: 1.5rem; }
+  .nav-links { gap: 40px; }
+  .control { padding-right: 200px; gap: 50px; }
+}
+
+/*  Narrow Mobile & Portrait Portrait (≤ 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .control {
+    padding-right: 20px;
+    gap: 10px;
+  }
+  .divs {
+    padding-left: 20px;
+  }
+  .my-button, .button-hover {
+    width: 100%;
+    max-width: 120px;
+  }
+}

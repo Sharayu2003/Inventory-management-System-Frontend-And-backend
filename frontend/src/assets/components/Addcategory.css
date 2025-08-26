@@ -1,0 +1,174 @@
+/* General form container and layout */
+.layout-container {
+  display: flex;
+}
+
+/* Changed container name from .form-container to .product-form-wrapper */
+
+.category-form-wrapper{
+  flex-grow: 1; /* Allows the form container to fill the remaining space */
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Row-based layout for fields */
+.div10 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.field {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Form input styling */
+.category-form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.category-form input {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.category-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Specific styling for file input */
+.category-form input[type="file"] {
+  padding: 0.5rem 0.75rem;
+}
+
+/* Button styling */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-row button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  font-weight: 600;
+}
+
+.button-row button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.button-row button[type="submit"]:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.clear-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+
+
+/* ——— Tablet & Small Desktops (≥ 576px) ——— */
+@media (min-width: 576px) {
+  .layout-container {
+    display: flex;
+  }
+
+  .category-form-wrapper {
+    padding: 1.5rem; /* Responsive padding */
+  }
+
+  .div10 {
+    display: flex;
+    gap: 1rem; /* Horizontal layout for form fields */
+  }
+
+  .field {
+    flex: 1; /* Each field evenly spans space */
+  }
+
+  .button-row {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .button-row button {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* ——— Tablets & Laptops (≥ 768px) ——— */
+@media (min-width: 768px) {
+  .category-form-wrapper {
+    padding: 2rem;
+  }
+
+  .category-form {
+    max-width: 800px; /* Wider form on larger screens */
+    padding: 2rem;
+  }
+
+  .div10 {
+    gap: 1.5rem; /* More spacing between fields */
+  }
+
+  .button-row {
+    gap: 1rem;
+  }
+}
+
+/* ——— Large Desktops (Optional, ≥ 992px) ——— */
+@media (min-width: 992px) {
+  .category-form-wrapper {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .category-form {
+    padding: 3rem; /* Extra spacious layout */
+  }
+
+  .button-row {
+    gap: 1.5rem;
+  }
+}
